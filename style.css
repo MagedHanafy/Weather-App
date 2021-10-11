@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Sriracha", cursive;
+  color: #e9e4f0;
+  background: #2980b9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #6dd5fa,
+    #2980b9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #6dd5fa,
+    #2980b9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  width: 420px;
+  height: 500px;
+  box-shadow: 0px 13px 40px -13px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+
+  background: #8e2de2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #2344b1,
+    #8e2de2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #2344b1,
+    #8e2de2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+header {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 1rem 1rem 1rem;
+}
+.city-name-input {
+  width: 22rem;
+  font-family: "Sriracha", cursive;
+  font-weight: 300;
+  color: #737373;
+  display: inline-block;
+  border: solid 2px transparent;
+  padding: 0.5rem 1rem;
+}
+.city-name-input::placeholder {
+  color: rgb(146, 137, 137);
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.city-name-input:focus {
+  border-bottom: solid 2px #e53935;
+}
+.city-name-button {
+  background: transparent;
+  border: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: 300;
+  color: #1100ff;
+  position: absolute;
+  transform: translate(-100%, 22%);
+}
+.geolocation-button {
+  font-family: "Sriracha", cursive;
+  padding: 4px 10px 5px 10px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #e9e4f0;
+  text-decoration: none;
+  text-shadow: 0px 0px 50px #3d768a;
+  font-weight: 300;
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #599bb3),
+    color-stop(1, #408c99)
+  );
+  background: -moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+  background: -webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+  background: -o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+  background: -ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+  background-color: #599bb3;
+}
+.geolocation-button:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #408c99),
+    color-stop(1, #599bb3)
+  );
+  background: -moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background: -webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background: -o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background: -ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+  background-color: #408c99;
+}
+.geolocation-button:active {
+  position: relative;
+  top: 1px;
+}
+.display-error {
+  color: #ff4744;
+  height: 3.5rem;
+}
+.display-error,
+.city-name,
+.display-date {
+  text-align: center;
+  font-size: 2rem;
+}
+.temperature-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.degree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  cursor: pointer;
+}
+.description,
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.description-text {
+  font-size: 2rem;
+  margin-top: -2rem;
+}
+.details-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.details {
+  padding-top: 1.5rem;
+  font-size: 2rem;
+}
